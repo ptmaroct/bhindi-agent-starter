@@ -1,6 +1,10 @@
 # Bhindi Agent Starter Kit
 
-A TypeScript-based agent starter kit that demonstrates both **public calculator tools** and **authenticated GitHub tools**. Perfect for learning agent development with the Bhindi.io specification.
+A TypeScript-based agent starter kit that demonstrates both **public calculator tools** and **authenticated GitHub tools**. Perfect for learning agent development with the [Bhindi.io](https://bhindi.io) specification.
+
+## 📚 Documentation
+
+For comprehensive documentation on building agents, visit the [Bhindi Documentation](https://github.com/upsurgeio/bhindi-docs).
 
 ## 🎯 What This Demonstrates
 
@@ -218,7 +222,7 @@ Once you understand this agent, you can:
 
 ## 📖 Agent Specification Compliance
 
-This starter follows the Bhindi.io agent specification:
+This starter follows the [Bhindi.io](https://bhindi.io) agent specification:
 - ✅ Required endpoints: `GET /tools`, `POST /tools/:toolName`
 - ✅ Standardized response formats: `BaseSuccessResponseDto`, `BaseErrorResponseDto`
 - ✅ JSON Schema parameter validation
@@ -227,3 +231,13 @@ This starter follows the Bhindi.io agent specification:
 - ✅ Proper error handling and status codes
 
 Perfect for learning how to build production-ready agents! 🎉
+
+## Need Help?
+
+We're here for you! You can reach out to us at:
+
+- **Email**: [info@bhindi.io](mailto:info@bhindi.io)
+- **Twitter/X**: [@bhindiai](https://x.com/bhindiai) for the latest updates
+- **Discord**: [Join our community](https://discord.gg/tuXzyx5U)
+- **Documentation**: [Bhindi Docs](https://github.com/upsurgeio/bhindi-docs)
+- **Website**: [Bhindi.io](https://bhindi.io)
