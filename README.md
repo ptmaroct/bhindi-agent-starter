@@ -2,11 +2,17 @@
 
 A TypeScript-based agent starter kit that demonstrates both **public calculator tools** and **authenticated GitHub tools**. Perfect for learning agent development with the [Bhindi.io](https://bhindi.io) specification.
 
+# What is Bhindi?
+Bhindi lets you talk to your apps like you talk to a friend.
+Bhindi supports 100+ integrations and is the easiest way to build AI agents.
+
+Check a list of integrations available at [Bhindi Agents Directory](https://directory.bhindi.io/)
+
 ## 📚 Documentation
 
 For comprehensive documentation on building agents, visit the [Bhindi Documentation](https://github.com/upsurgeio/bhindi-docs).
 
-## 🎯 What This Demonstrates
+## 🎯 What This Starter Kit Demonstrates
 
 This starter kit teaches you how to build agents with:
 - **Public tools** (Calculator - no authentication required)
@@ -50,6 +56,7 @@ This starter kit teaches you how to build agents with:
 | `sqrt` | Square root | Error handling for negative inputs |
 | `percentage` | Calculate percentage | Handles decimal percentages |
 | `factorial` | Calculate factorial | `credits: 2`, `confirmationRequired: true` |
+| `countCharacter` | Count character occurrences in text | String manipulation |
 
 ### GitHub Tools (Private - Auth Required)
 
@@ -85,6 +92,11 @@ curl -X GET "http://localhost:3000/tools"
 curl -X POST "http://localhost:3000/tools/add" \
   -H "Content-Type: application/json" \
   -d '{"a": 5, "b": 3}'
+
+# Test character counting
+curl -X POST "http://localhost:3000/tools/countCharacter" \
+  -H "Content-Type: application/json" \
+  -d '{"character": "s", "text": "strawberrry"}'
 ```
 
 ## 🧮 Usage Examples
@@ -111,6 +123,23 @@ curl -X POST "http://localhost:3000/tools/factorial" \
 curl -X POST "http://localhost:3000/tools/percentage" \
   -H "Content-Type: application/json" \
   -d '{"percentage": 25, "of": 80}'
+
+# Character counting in text
+curl -X POST "http://localhost:3000/tools/countCharacter" \
+  -H "Content-Type: application/json" \
+  -d '{"character": "s", "text": "strawberrry"}'
+
+# Expected response:
+# {
+#   "success": true,
+#   "responseType": "mixed",
+#   "data": {
+#     "operation": "Count 's' in \"strawberrry\"",
+#     "result": 1,
+#     "message": "Calculated Count 's' in \"strawberrry\" = 1",
+#     "tool_type": "calculator"
+#   }
+# }
 ```
 
 ### GitHub Tools (Authentication Required)
